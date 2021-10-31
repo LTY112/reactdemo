@@ -1,6 +1,6 @@
-import { Switch, Route, Router } from 'react-router-dom';
+import { Switch, Route, Router, Redirect } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
-import { routes } from './router/routes';
+import Home from '@/views/index';
 import './App.css';
 const history = createBrowserHistory();
 
@@ -8,11 +8,8 @@ function App() {
   return (
     <Router history={history}>
       <Switch>
-        {
-          routes.map(item => {
-            return (<Route path={item.path} exact component={item.component} key={item.path+'rou'} />)
-          })
-        }
+        <Route path="/" component={Home} /> 
+        <Redirect from="/" to="/home" /> 
       </Switch>
     </Router>
   );

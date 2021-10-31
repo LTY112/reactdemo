@@ -3,12 +3,7 @@ import Bbb from '@/views/bbb'
 
 export const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: Home
-  },
-  {
-    path: '/bbb',
+    path: '/home',
     name: 'home',
     component: Bbb
   }
